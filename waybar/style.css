@@ -1,18 +1,20 @@
-
-
 @import "mocha.css"; 
 
 * {
-  font-family: FantasqueSansMono Nerd Font;
-  font-size: 17px;
-  min-height: 0;
+    font-family: "MesloLGS Nerd Font Mono Bold";
+    font-size: 16px;
+    min-height: 0;
+    font-weight: bold;
 }
 
-#waybar {
-  background: transparent;
-  background-color: rgba(0,0,0,0.75);
-  color: @text;
-  margin: 5px 5px;
+window#waybar {
+    background: transparent;
+    opacity: 0.8;
+    background-color: @crust;
+    color: @overlay0;
+    transition-property: background-color;
+    transition-duration: 0.1s;
+    border-bottom: 1px solid @overlay1;
 }
 
 #window {
@@ -56,14 +58,25 @@ button:hover {
 #pulseaudio,
 #clock,
 #battery,
-#cpu,
-#memory,
+#cpu {
+    color: @green;
+    border-bottom: 2px solid @green;
+    padding: 0 10px 0 10px;
+}
+#memory {
+    color: @yellow;
+    border-bottom: 2px solid @yellow;
+    padding: 0 10px 0 10px;
+}
 #disk,
-#temperature,
+#temperature {
+    color: @peach;
+    border-bottom: 2px solid @peach;
+    padding: 0 10px 0 10px;
+}
 #backlight,
 #wireplumber,
 #tray,
-#network,
 #mode,
 #scratchpad {
   margin-top: 2px;
@@ -75,13 +88,13 @@ button:hover {
 }
 
 #clock {
-    color: @maroon;
-    border-bottom: 2px solid @maroon;
+    color: @red;
+    border-bottom: 2px solid @red;
 }
 
 #clock.date {
-    color: @mauve;
-    border-bottom: 2px solid @mauve;
+    color: @red;
+    border-bottom: 2px solid @red;
 }
 
 #pulseaudio {
@@ -90,8 +103,8 @@ button:hover {
 }
 
 #network {
-    color: @yellow;
-    border-bottom: 2px solid @yellow;
+    color: @lavender;
+    border-bottom: 2px solid @lavender;
 }
 
 #idle_inhibitor {
@@ -104,8 +117,8 @@ button:hover {
 }
 
 #battery {
-    color: @green;
-    border-bottom: 2px solid @green;
+    color: @teal;
+    border-bottom: 2px solid @teal;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
